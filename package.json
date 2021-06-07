@@ -1,0 +1,36 @@
+{
+    "appName": "devcord",
+    "name": "devcord",
+    "version": "0.0.1",
+    "description": "Discord Oauth2 & Bot Wrapper",
+    "main": "devcord",
+    "scripts": {
+        "oauth-test": "nodemon examples/oauth2.js",
+        "bot-test": "nodemon examples/bot.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/DeveloperAdeel/devcord.git"
+    },
+    "keywords": [
+        "devcord",
+        "discordbot",
+        "discordjs",
+        "discord oauth",
+        "discord verification"
+    ],
+    "author": "Adeel Khan",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/DeveloperAdeel/devcord/issues"
+    },
+    "homepage": "https://github.com/DeveloperAdeel/devcord#readme",
+    "devDependencies": {
+        "nodemon": "^2.0.7",
+        "express": "^4.17.1"
+    },
+    "dependencies": {
+        "discord.js": "^12.5.3",
+        "got": "^11.8.2"
+    }
+}

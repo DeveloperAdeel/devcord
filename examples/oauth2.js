@@ -1,17 +1,3 @@
-# devcord
-Discord Bot &amp; Oauth Wrapper
-
-# Installation
-
-`npm i devcord`
-or
-`npm i devcord --save`
-
-# Usage
-
-## Discord OAuth2
-
-```javascript
 const express = require("express");
 const app = express();
 const { Oauth2, Bot } = require("devcord");
@@ -56,18 +42,3 @@ app.get("/auth/discord", async (req, res, next) => {
 app.listen(PORT, () => {
     console.log(`Listening on PORT <${PORT.toString()}>`);
 });
-```
-
-## Discord Bot
-```javascript
-const { Oauth2, Bot } = require("devcord");
-
-const botToken = "<YOUR_BOT_TOKEN>";
-
-(async () => {
-    const bot = await new Bot(botToken);
-    // do your stuff here with bot.XXX APIs
-    console.log(bot);
-})();
-
-```
