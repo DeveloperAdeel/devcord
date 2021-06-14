@@ -23,7 +23,7 @@ class Oauth2 {
 
     constructor(conf, refreshToken = null) {
         this.conf = { scope: "identify" }; // Formality - Scope for Access Token
-        this.availableScopes = ["identity", "email", "guilds", "connections"]; // available in the `this` class
+        this.availableScopes = ["identify", "email", "guilds", "connections"]; // available in the `this` class
         this.allowedScopes = []; // allowed after generating access token
 
         this.tokens = null; // Stores tokens
@@ -203,12 +203,12 @@ class Oauth2 {
      * @returns {Promise} that evals @type {Object}
      */
 
-    async identity() {
+    async identify() {
         return await this.request("/users/@me");
     }
 
     async email() {
-        return await this.identity().then((r) => r.email);
+        return await this.identify().then((r) => r.email);
     }
 
     async guilds() {

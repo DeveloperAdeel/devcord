@@ -44,8 +44,8 @@ app.get("/auth/discord", async (req, res, next) => {
     // Oauth2 Client
     // await is important because client is written async
     let oauth = await new Oauth2(conf);
-    // Oauth2 scopes, supported: ["identity", "email", "guilds", "connections"]
-    let response = await oauth.get(["identity", "email", "connections"]);
+    // Oauth2 scopes, supported: ["identify", "email", "guilds", "connections"]
+    let response = await oauth.get(["identify", "email", "connections"]);
     // gives you pretty clean JSON
     if (response.success && response.data) {
         // Do your stuff here
